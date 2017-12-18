@@ -389,6 +389,7 @@ struct mmc_card {
 
 /* Make sure CMDQ is empty before queuing DCMD */
 #define MMC_QUIRK_CMDQ_EMPTY_BEFORE_DCMD (1 << 15)
+#define MMC_QUIRK_SEC_ERASE_TRIM_REQUIRE (1 << 18)
 
 	unsigned int		erase_size;	/* erase size in sectors */
  	unsigned int		erase_shift;	/* if erase unit is power 2 */
@@ -505,6 +506,7 @@ struct mmc_fixup {
 #define CID_MANFID_MICRON	0x13
 #define CID_MANFID_SAMSUNG	0x15
 #define CID_MANFID_KINGSTON	0x70
+#define CID_MANFID_KINGSTON2	0x41
 #define CID_MANFID_HYNIX	0x90
 #define CID_MANFID_NUMONYX_MICRON 0xfe
 
